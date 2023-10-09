@@ -17,7 +17,7 @@ form, label, legend, table, caption, tbody,
 tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
-section, summary, time, mark, audio, video {
+section, summary, time, mark, audio, video, imgshowcase {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -289,6 +289,16 @@ input, select, textarea {
 			}
 
 		}
+
+
+
+/* Box */
+	.imgshowcase {
+		padding: 1em;
+	    height:200px;
+	    width:200px;
+	    
+	}
 
 /* Row */
 
