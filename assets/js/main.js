@@ -76,7 +76,9 @@
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
   /* ---------- stats (computed from data) ---------- */
-  const PUBS = window.PUBS || [];
+  // lab site shows lab-era work only (PhD-era papers with Hen-Hsen Huang / Hsin-Hsi Chen stay on the personal page)
+  const PUBS = (window.PUBS || []).filter(p => !/Hen-Hsen Huang|Hsin-Hsi Chen/.test(p.authors));
+  window.LAB_PUBS = PUBS;
   const venueFamily = v => v.replace(/\s*(20\d\d|Findings|Demo)/g, '').trim();
   const stats = {
     statPubs: PUBS.filter(p => p.type !== 'preprint' && p.type !== 'chapter').length,
@@ -93,6 +95,7 @@
 
   /* ---------- featured tabs ---------- */
   const tabs = document.querySelectorAll('#featTabs .tab');
+  const showPanel = key => { const t = [...tabs].find(x => x.dataset.panel === key); if (t) t.click(); };
   tabs.forEach(t => t.addEventListener('click', () => {
     tabs.forEach(x => x.setAttribute('aria-selected', x === t));
     document.querySelectorAll('.panel').forEach(p => p.classList.toggle('active', p.id === 'panel-' + t.dataset.panel));
@@ -146,5 +149,12 @@
     search.addEventListener('input', render);
     document.querySelectorAll('[data-filter]').forEach(a => a.addEventListener('click', () => setFilter(a.dataset.filter)));
     render();
+    // deep links: #featured-<panel>, #publications-<filter>
+    const applyHash = () => {
+      const h = location.hash.slice(1), mf = h.match(/^featured-(\w+)$/), mp = h.match(/^publications-(\w+)$/);
+      if (mf) { showPanel(mf[1]); document.getElementById('featured').scrollIntoView(); }
+      if (mp) { setFilter(mp[1]); document.getElementById('publications').scrollIntoView(); }
+    };
+    applyHash(); window.addEventListener('hashchange', applyHash);
   }
 })();

@@ -1,368 +1,148 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-lab="https://nycu-nlp-lab.github.io/">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>NYCU NLP Lab — An-Zi Yen</title>
-<meta name="description" content="NYCU NLP Lab, led by An-Zi Yen at National Yang Ming Chiao Tung University: personalized, trustworthy, and efficient AI across multimodal understanding, personalization, trustworthy reasoning, and efficient systems.">
-<meta property="og:title" content="NYCU NLP Lab — An-Zi Yen">
-<meta property="og:description" content="AI that reasons, adapts, and works with people.">
+<title>An-Zi Yen — NYCU</title>
+<meta name="description" content="An-Zi Yen, Assistant Professor of Computer Science at National Yang Ming Chiao Tung University. Natural language processing, information retrieval, and personal AI assistants. Leads the NYCU NLP Lab.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/personal.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%232F5BFF'/%3E%3Ccircle cx='10' cy='16' r='3' fill='%23fff'/%3E%3Ccircle cx='22' cy='10' r='3' fill='%2322D3EE'/%3E%3Ccircle cx='22' cy='22' r='3' fill='%23fff'/%3E%3Cpath d='M10 16L22 10M10 16L22 22' stroke='%23fff' stroke-width='1.6'/%3E%3C/svg%3E">
 </head>
 <body>
 
-<!-- ===== NAV ===== -->
 <header class="nav" id="nav">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="NYCU NLP Lab home">
-      <span class="mark"><svg viewBox="0 0 32 32" fill="none"><circle cx="10" cy="16" r="3.2" fill="#fff"/><circle cx="22" cy="9" r="3.2" fill="#fff"/><circle cx="22" cy="23" r="3.2" fill="#fff"/><path d="M10 16L22 9M10 16L22 23" stroke="#fff" stroke-width="1.8"/></svg></span>
-      <span>NYCU NLP Lab<small>National Yang Ming Chiao Tung University</small></span>
-    </a>
+    <div class="brand">
+      <a class="mark" href="#top" aria-label="Home"><svg viewBox="0 0 32 32" fill="none"><circle cx="10" cy="16" r="3.2" fill="#fff"/><circle cx="22" cy="9" r="3.2" fill="#fff"/><circle cx="22" cy="23" r="3.2" fill="#fff"/><path d="M10 16L22 9M10 16L22 23" stroke="#fff" stroke-width="1.8"/></svg></a>
+      <nav class="switch" aria-label="Site switcher"><a class="on" href="#top">An-Zi Yen</a><a data-lab="" href="https://nycu-nlp-lab.github.io/">NYCU NLP Lab</a></nav>
+    </div>
     <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     <ul class="nav-links" id="navLinks">
+      <li><a href="#introduction">About</a></li>
+      <li><a href="#lab">Lab</a></li>
       <li><a href="#research">Research</a></li>
-      <li><a href="#featured">Featured</a></li>
-      <li><a href="#spotlight">Spotlight</a></li>
       <li><a href="#publications">Publications</a></li>
-      <li><a href="#demos">Demos</a></li>
-      <li><a href="#people">People</a></li>
+      <li><a href="#honors">Honors</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
 </header>
 
-<!-- ===== HERO ===== -->
-<section class="hero" id="top">
-  <canvas id="heroCanvas" aria-hidden="true"></canvas>
+<section class="hero compact" id="top">
   <div class="wrap">
-    <div class="eyebrow">NYCU NLP Lab · Dept. of Computer Science</div>
-    <h1>AI that <span class="grad">reasons, adapts,</span> and works with people.</h1>
-    <p class="lead">We build personalized, trustworthy, and efficient AI that brings together multimodal perception, knowledge, and reasoning to support people in daily life.</p>
-    <div class="cta">
-      <a class="btn btn-primary" href="#featured">Explore featured research <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="btn btn-ghost" href="#publications">Publications</a>
+    <div>
+      <div class="eyebrow">Assistant Professor · Computer Science · NYCU</div>
+      <h1>An-Zi Yen<small>顏安孜</small></h1>
+      <div class="role">Natural language processing · information retrieval · personal AI assistants</div>
+      <p class="lead">I lead the NYCU NLP Lab, where we build personalized, trustworthy, and efficient AI that brings together multimodal perception, knowledge, and reasoning to support people in daily life.</p>
+      <div class="cta">
+        <a class="btn btn-primary" data-lab="" href="https://nycu-nlp-lab.github.io/">Visit the lab <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-primary red" href="https://scholar.google.com.tw/citations?user=QL-GNDQAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+        <a class="btn btn-ghost" href="mailto:azyen@nycu.edu.tw">Email</a>
+      </div>
     </div>
-    <div class="stats" id="stats">
-      <div class="stat"><div class="num" data-count="0" id="statPubs">0</div><div class="lbl">Peer-reviewed publications</div></div>
-      <div class="stat"><div class="num" data-count="0" id="statVenues">0</div><div class="lbl">Distinct venues, incl. EMNLP, SIGIR, WWW, AAAI</div></div>
-      <div class="stat"><div class="num" data-count="0" id="stat2026">0</div><div class="lbl">Papers at EMNLP &amp; EACL 2026</div></div>
-    </div>
+    <div class="portrait"><img src="assets/img/azyen.jpg" alt="An-Zi Yen"></div>
   </div>
-  <div class="scroll-cue">Scroll<span></span></div>
 </section>
 
-<!-- ===== RESEARCH AREAS ===== -->
+<section class="section" id="introduction">
+  <div class="wrap bio">
+    <div class="reveal">
+      <div class="eyebrow">About</div>
+      <p>Dr. An-Zi Yen is an Assistant Professor in the Department of Computer Science at National Yang Ming Chiao Tung University. Her research interests include natural language processing and information retrieval, with a current focus on personal AI assistants that understand a person's situation and decide when and how to help.</p>
+      <p>Her work has been published in AAAI, EMNLP, WWW, SIGIR, and CIKM. She received the Honorable Mention of the ACLCLP Doctoral Dissertation Award in 2020 and was a distinguished PC member at IJCAI 2023. She served as web chair of SIGIR 2023 and as a PC member of AAAI, IJCAI, CIKM, and EACL.</p>
+    </div>
+    <div class="facts reveal" data-delay="1" style="margin-top:0">
+      <div class="fact"><h4>Experience</h4><ul><li>Assistant Professor, Dept. of Computer Science, National Yang Ming Chiao Tung University</li><li>Postdoctoral Researcher, NLP Lab, National Taiwan University</li><li>Adjunct Assistant Professor, Dept. of Quantitative Finance, National Tsing Hua University</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="section tint" id="labsec">
+  <div class="wrap">
+    <span id="projects"></span>
+    <div class="labcard reveal" id="lab">
+      <canvas id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="inner">
+        <div>
+          <div class="eyebrow">Welcome to NYCU NLP Lab</div>
+          <h2>AI that <span class="grad">reasons, adapts,</span> and works with people.</h2>
+          <p class="lead">Four research directions, one goal: AI that understands people and the world they live in, and helps them well.</p>
+          <div class="stats" id="stats">
+            <div class="stat"><div class="num" id="statPubs">0</div><div class="lbl">Peer-reviewed publications</div></div>
+            <div class="stat"><div class="num" id="statVenues">0</div><div class="lbl">Distinct venues</div></div>
+            <div class="stat"><div class="num" id="stat2026">0</div><div class="lbl">Papers at EMNLP &amp; EACL 2026</div></div>
+          </div>
+          <div class="foot"><a class="btn btn-primary" data-lab="" href="https://nycu-nlp-lab.github.io/">Visit NYCU NLP Lab <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><span class="url">nycu-nlp-lab.github.io</span></div>
+        </div>
+        <div>
+          <div class="mini-h">Featured research</div>
+          <div class="minis">
+            <a class="mini" data-lab="#featured-egoargus" href="#"><span><b>EgoArgus</b><small>Benchmarking VLMs as situational assistants: which modality to trust?</small></span><span class="v">EMNLP 2026</span></a>
+            <a class="mini" data-lab="#featured-vdar" href="#"><span><b>VDAR-Router</b><small>Route each query by its verbalized difficulty, not its words.</small></span><span class="v">EMNLP 2026 Findings</span></a>
+            <a class="mini" data-lab="#featured-personaedit" href="#"><span><b>PersonaEdit</b><small>Personalize by editing the model with representative samples.</small></span><span class="v">EMNLP 2026 Findings</span></a>
+            <a class="mini" data-lab="#featured-mathedu" href="#"><span><b>MathEDU</b><small>Feedback on every step of a student's solution.</small></span><span class="v">EACL 2026</span></a>
+            <a class="mini" data-lab="assistants.html" href="#"><span><b>Situational assistants</b><small>The flagship series: real videos, EgoArgus and VISTA.</small></span><span class="v">Series →</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="research">
   <div class="wrap">
     <div class="section-head reveal">
-      <div><div class="eyebrow">Research areas</div><h2 class="h2">Four questions we keep coming back to.</h2></div>
-      <p class="lead">Four directions, one goal: AI that understands people and the world they live in, and helps them well.</p>
+      <div><div class="eyebrow">Research</div><h2 class="h2">Four questions we keep coming back to.</h2></div>
+      <p class="lead">Each direction links to the papers on the lab site.</p>
     </div>
     <div class="areas">
-      <article class="area reveal" data-area="situated">
-        <div class="glow"></div>
-        <div class="icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16s4.5-7 12-7 12 7 12 7-4.5 7-12 7S4 16 4 16z"/><circle cx="16" cy="16" r="3.5"/><path d="M16 4v2M16 26v2"/></svg></div>
-        <a class="flag" href="assistants.html">Flagship theme →</a>
-        <h3>Multimodal understanding &amp; situated intelligence</h3>
-        <p>How can AI integrate what it sees, hears, and reads to understand an environment, an event, and what the user needs right now?</p>
-        <div class="chips"><span class="chip">EgoArgus</span><span class="chip">VISTA</span><span class="chip">ConvLogRecaller</span><span class="chip">Visual lifelog retrieval</span></div>
-        <a class="more" href="#publications" data-filter="situated">See papers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </article>
-      <article class="area reveal" data-area="personal" data-delay="1">
-        <div class="glow"></div>
-        <div class="icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="11" r="5"/><path d="M6 27c1.5-5 5.5-7.5 10-7.5s8.5 2.5 10 7.5"/><path d="M24 6l1.2 2.4L28 9.5l-2.8 1.1L24 13l-1.2-2.4L20 9.5l2.8-1.1z"/></svg></div>
-        <h3>Personalization &amp; adaptive intelligence</h3>
-        <p>How can AI use personal knowledge and interaction history to adapt to each user and each task?</p>
-        <div class="chips"><span class="chip">PersonaEdit</span><span class="chip">Personal knowledge base QA</span><span class="chip">Personalized graph LLM</span><span class="chip">LED</span></div>
-        <a class="more" href="#publications" data-filter="personal">See papers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </article>
-      <article class="area reveal" data-area="trust" data-delay="2">
-        <div class="glow"></div>
-        <div class="icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3l10 4v8c0 7-4.5 11.5-10 14C10.5 26.5 6 22 6 15V7l10-4z"/><path d="M11.5 16l3 3 6-6"/></svg></div>
-        <h3>Trustworthy reasoning &amp; assistance</h3>
-        <p>How can AI reason from evidence and give help that is understandable, checkable, and appropriate?</p>
-        <div class="chips"><span class="chip">RefuteClaim</span><span class="chip">MAGIC</span><span class="chip">ZARA</span><span class="chip">MathEDU</span></div>
-        <a class="more" href="#publications" data-filter="trust">See papers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </article>
-      <article class="area reveal" data-area="efficient" data-delay="3">
-        <div class="glow"></div>
-        <div class="icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16h7l3-8 4 16 3-8h7"/></svg></div>
-        <h3>Efficient &amp; resource-aware AI</h3>
-        <p>How can AI allocate models and data to what a task needs, balancing quality against cost?</p>
-        <div class="chips"><span class="chip">VDAR-Router</span><span class="chip">Confidence-driven selection</span><span class="chip">Representative sample selection</span></div>
-        <a class="more" href="#publications" data-filter="efficient">See papers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </article>
+      <article class="area reveal" data-area="situated"><div class="glow"></div><div class="icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16s4.5-7 12-7 12 7 12 7-4.5 7-12 7S4 16 4 16z"/><circle cx="16" cy="16" r="3.5"/><path d="M16 4v2M16 26v2"/></svg></div><h3>Multimodal understanding &amp; situated intelligence</h3><p>How can AI integrate what it sees, hears, and reads to understand an environment, an event, and what the user needs right now?</p><a class="more" data-lab="#publications-situated" href="#">See papers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+      <article class="area reveal" data-area="personal" data-delay="1"><div class="glow"></div><div class="icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="11" r="5"/><path d="M6 27c1.5-5 5.5-7.5 10-7.5s8.5 2.5 10 7.5"/><path d="M24 6l1.2 2.4L28 9.5l-2.8 1.1L24 13l-1.2-2.4L20 9.5l2.8-1.1z"/></svg></div><h3>Personalization &amp; adaptive intelligence</h3><p>How can AI use personal knowledge and interaction history to adapt to each user and each task?</p><a class="more" data-lab="#publications-personal" href="#">See papers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+      <article class="area reveal" data-area="trust" data-delay="2"><div class="glow"></div><div class="icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3l10 4v8c0 7-4.5 11.5-10 14C10.5 26.5 6 22 6 15V7l10-4z"/><path d="M11.5 16l3 3 6-6"/></svg></div><h3>Trustworthy reasoning &amp; assistance</h3><p>How can AI reason from evidence and give help that is understandable, checkable, and appropriate?</p><a class="more" data-lab="#publications-trust" href="#">See papers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+      <article class="area reveal" data-area="efficient" data-delay="3"><div class="glow"></div><div class="icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16h7l3-8 4 16 3-8h7"/></svg></div><h3>Efficient &amp; resource-aware AI</h3><p>How can AI allocate models and data to what a task needs, balancing quality against cost?</p><a class="more" data-lab="#publications-efficient" href="#">See papers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
     </div>
   </div>
 </section>
 
-<!-- ===== FEATURED (interactive explainers) ===== -->
-<section class="section dark" id="featured">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div><div class="eyebrow">Featured research</div><h2 class="h2">Play with the idea.</h2></div>
-      <p class="lead">The question, the mechanism, and what we found.</p>
-    </div>
-    <div class="tabs-wrap reveal"><button class="tab-arrow" id="tabPrev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg></button><button class="tab-arrow right" id="tabNext" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
-    <div class="tabs" role="tablist" id="featTabs">
-      <button class="tab" role="tab" aria-selected="true" data-panel="egoargus"><b>EgoArgus</b><small>EMNLP 2026 · Which modality to trust?</small></button>
-      <button class="tab" role="tab" aria-selected="false" data-panel="vdar"><b>VDAR-Router</b><small>EMNLP 2026 Findings · Route by difficulty</small></button>
-      <button class="tab" role="tab" aria-selected="false" data-panel="personaedit"><b>PersonaEdit</b><small>EMNLP 2026 Findings · Edit, don't retrieve</small></button>
-      <button class="tab" role="tab" aria-selected="false" data-panel="mathedu"><b>MathEDU</b><small>EACL 2026 · Feedback on every step</small></button>
-      <button class="tab" role="tab" aria-selected="false" data-panel="refute"><b>RefuteClaim</b><small>WWW 2024 · Name the flaw</small></button>
-    </div>
-    <div class="tab-rail"><span id="tabRail"></span></div>
-    </div>
-
-    <div class="panel active" id="panel-egoargus" role="tabpanel">
-      <div>
-        <span class="venue">EMNLP 2026 · Main conference</span>
-        <h3>EgoArgus: Benchmarking VLMs as Situational Assistants</h3>
-        <p class="q">An assistant sees your kitchen and hears you say "the stove is off." Which one should it believe?</p>
-        <p>Existing egocentric benchmarks test visual understanding in isolation. EgoArgus asks a harder question: when the camera and the user disagree, can the model tell which modality is trustworthy and decide whether to step in at all?</p>
-        <div class="kv">
-          <div><b>Dataset</b>Human-annotated dialogue-video scenarios across five daily settings, with visual and language cues that are helpful, irrelevant, or conflicting.</div>
-          <div><b>Tasks</b>Understanding (what is going on) and decision (should the assistant intervene, and how).</div>
-          <div><b>Finding</b>Current VLMs still struggle to arbitrate between modalities, and existing bias-mitigation methods help only within narrow limits.</div>
-        </div>
-        <div class="links"><a class="btn btn-primary" href="https://arxiv.org/abs/2608.25561" target="_blank" rel="noopener">Read the paper</a><a class="btn btn-ghost" href="https://arxiv.org/abs/2605.10579" target="_blank" rel="noopener">VISTA companion demo</a></div>
-      </div>
-      <div class="stage" id="ex-egoargus"><div class="ex-stage"></div><div class="ex-controls"></div><div class="ex-note"></div></div>
-    </div>
-
-    <div class="panel" id="panel-vdar" role="tabpanel">
-      <div>
-        <span class="venue">EMNLP 2026 · Findings</span>
-        <h3>VDAR-Router: Adaptive LLM Routing via Verbalized Query Difficulty</h3>
-        <p class="q">Two queries can use the same words and still be worlds apart in difficulty. Why route them the same way?</p>
-        <p>Most routers judge a query by its surface semantics or embedding. VDAR-Router first writes out an explicit difficulty analysis, retrieves past queries with a similar difficulty profile, and uses their outcomes to pick the model that balances cost and quality.</p>
-        <div class="kv">
-          <div><b>Step 1</b>Verbalize the difficulty of the incoming query.</div>
-          <div><b>Step 2</b>Retrieve historical records with similar difficulty profiles.</div>
-          <div><b>Step 3</b>Estimate each candidate model's suitability and select under a cost-performance reward.</div>
-        </div>
-        <div class="links"><a class="btn btn-primary" href="https://arxiv.org/abs/2607.18098" target="_blank" rel="noopener">Read the paper</a><a class="btn btn-ghost" href="https://arxiv.org/abs/2602.22090" target="_blank" rel="noopener">Related: confidence-driven selection</a></div>
-      </div>
-      <div class="stage" id="ex-vdar"><div class="ex-stage"></div><div class="ex-controls"></div><div class="ex-note"></div></div>
-    </div>
-
-    <div class="panel" id="panel-refute" role="tabpanel">
-      <div>
-        <span class="venue">WWW 2024</span>
-        <h3>How We Refute Claims: Fact-Checking through Flaw Identification</h3>
-        <p class="q">"False" is not an explanation. What exactly is wrong with the claim?</p>
-        <p>RefuteClaim reframes fact-checking as flaw-oriented verification: generate the aspects a claim should be judged on, identify the flaw under each aspect, and explain the verdict. FlawCheck, our dataset, distills expert fact-checker reviews into aspects and flaws.</p>
-        <div class="kv">
-          <div><b>Task</b>Aspect generation and flaw identification, in addition to the verdict.</div>
-          <div><b>Dataset</b>FlawCheck, built from expert reviews.</div>
-          <div><b>Finding</b>RefuteClaim is especially strong at classifying and elucidating false claims.</div>
-        </div>
-        <div class="links"><a class="btn btn-primary" href="https://arxiv.org/abs/2401.15312" target="_blank" rel="noopener">Read the paper</a><a class="btn btn-ghost" href="https://youtu.be/hLgLXMZczYo" target="_blank" rel="noopener">Watch the demo</a></div>
-      </div>
-      <div class="stage" id="ex-refute"><div class="ex-stage"></div><div class="ex-controls"></div><div class="ex-note"></div></div>
-    </div>
-
-    <div class="panel" id="panel-personaedit" role="tabpanel">
-      <div>
-        <span class="venue">EMNLP 2026 · Findings</span>
-        <h3>PersonaEdit: Representative Sample Selection for Personalized Model Editing</h3>
-        <p class="q">A user has told the model hundreds of things about themselves. Which few should be written into its weights?</p>
-        <p>Retrieval-based personalization depends on retrieval quality and degrades over long-term interactions. Model editing writes new knowledge directly into the parameters, but editing every user sample is costly and the edits interfere with each other. PersonaEdit clusters the hidden representations of a user's data and picks representative samples by proportional stratified sampling.</p>
-        <div class="kv">
-          <div><b>Problem</b>Scaling model editing to personalization: many edits cost more and interfere.</div>
-          <div><b>Idea</b>Cluster hidden representations, then sample representatives in proportion to each cluster's size.</div>
-          <div><b>Finding</b>Model editing is an effective route to personalization when the editing samples are chosen well.</div>
-        </div>
-        <div class="links"><a class="btn btn-primary" href="https://arxiv.org/abs/2608.27816" target="_blank" rel="noopener">Read the paper</a></div>
-      </div>
-      <div class="stage" id="ex-personaedit"><div class="ex-stage"></div><div class="ex-controls"></div><div class="ex-note"></div></div>
-    </div>
-
-    <div class="panel" id="panel-mathedu" role="tabpanel">
-      <div>
-        <span class="venue">EACL 2026 · Main conference</span>
-        <h3>MathEDU: Feedback Generation on Problem-Solving Processes</h3>
-        <p class="q">A student's answer is wrong. Where did the reasoning go off track, and what should the teacher say?</p>
-        <p>MathEDU pairs real student problem-solving processes with teacher-written feedback, and evaluates models on three hierarchical tasks: is the answer correct, which step is wrong, and what feedback would help.</p>
-        <div class="kv">
-          <div><b>Task 1</b>Answer correctness classification.</div>
-          <div><b>Task 2</b>Error identification at the step level.</div>
-          <div><b>Task 3</b>Feedback generation, compared against teacher-written feedback.</div>
-          <div><b>Finding</b>Fine-tuning helps with correctness and locating the wrong step, but generated feedback still falls well short of teachers'.</div>
-        </div>
-        <div class="links"><a class="btn btn-primary" href="https://arxiv.org/abs/2505.18056" target="_blank" rel="noopener">Read the paper</a><a class="btn btn-ghost" href="https://aclanthology.org/2023.findings-emnlp.201/" target="_blank" rel="noopener">Position paper (EMNLP 2023)</a></div>
-      </div>
-      <div class="stage" id="ex-mathedu"><div class="ex-stage"></div><div class="ex-controls"></div><div class="ex-note"></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== SPOTLIGHT: flagship theme ===== -->
-<section class="section tint" id="spotlight">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div><div class="eyebrow">Flagship theme · Situational assistants</div><h2 class="h2">Personal AI assistants that see, listen, and know when to act.</h2></div>
-      <p class="lead">Our largest research line builds assistants that see the world from your point of view, listen to what you say, and decide whether, when, and how to help.</p>
-    </div>
-    <div class="series-tabs reveal" role="tablist">
-      <button class="series-tab" role="tab" aria-selected="true" data-pane="egoargus"><b>EgoArgus</b><small>EMNLP 2026 · Benchmark: which modality to trust?</small></button>
-      <button class="series-tab" role="tab" aria-selected="false" data-pane="vista"><b>VISTA</b><small>EMNLP 2026 Demo · Platform: generate the scenarios</small></button>
-      <a class="series-tab more" href="assistants.html"><b>Full series →</b><small>Overview, timeline, dataset, platform, papers</small></a>
-    </div>
-    <div class="series-pane active reveal" data-pane="egoargus">
-    <div class="spot-player reveal">
-      <div class="spot-video">
-        <video id="spotVideo" muted playsinline loop preload="metadata" poster="assets/video/mall.jpg"></video>
-        <div class="spot-bubble" id="spotDialogue"></div>
-        <div class="spot-assist" id="spotAssist"></div>
-        <div class="spot-timeline"><div class="spot-track"><div class="spot-fill" id="spotFill"></div><div class="spot-marker" id="spotMarker"></div></div></div>
-      </div>
-      <div class="spot-side">
-        <div class="case-tabs" role="tablist">
-          <button class="case-tab" role="tab" aria-selected="true"><img src="assets/video/mall.jpg" alt="">Mall</button>
-          <button class="case-tab" role="tab" aria-selected="false"><img src="assets/video/baby_tray.jpg" alt="">Baby and tray</button>
-          <button class="case-tab" role="tab" aria-selected="false"><img src="assets/video/metal_mug.jpg" alt="">Metal mug</button>
-          <button class="case-tab" role="tab" aria-selected="false"><img src="assets/video/car_roof.jpg" alt="">Car roof</button>
-          <button class="case-tab" role="tab" aria-selected="false"><img src="assets/video/sidewalk.jpg" alt="">Sidewalk</button>
-        </div>
-        <div class="spot-kv">
-          <div><b>What the user says</b><div class="variants" id="spotVariants"></div><p class="tl" id="spotHint"></p><div class="dlg" id="spotDlg"></div></div>
-          <div><b>Reviewed decision</b><p id="spotDecision"></p><p class="msg" id="spotMsg"></p></div>
-          <div><b>Why</b><p class="tl" id="spotWhy"></p></div>
-        </div>
-        <div class="spot-actions"><button class="btn btn-ghost" id="spotReplay">Replay</button><a class="btn btn-ghost" href="https://github.com/NYCU-NLP-Lab/EgoArgus" target="_blank" rel="noopener">Dataset &amp; code</a><a class="btn btn-primary" href="https://arxiv.org/abs/2608.25561" target="_blank" rel="noopener">EgoArgus paper</a></div>
-      </div>
-    </div>
-    </div>
-    <div class="series-pane" data-pane="vista">
-      <div class="spot-player">
-        <div class="spot-video"><video id="vistaClip" muted playsinline loop preload="metadata" poster="assets/img/vista/metal-container-microwave.webp" src="assets/video/vista_microwave.mp4"></video><span class="vtag">Generated by VISTA</span></div>
-        <div class="spot-side">
-          <div class="spot-kv">
-            <div><b>What VISTA does</b><p>Rare or risky assistance situations are hard, costly, or unsafe to film. VISTA takes a one-line scenario seed and produces an editable plan, an egocentric video, and an auditable review trail. The platform ships 14 reviewed demonstrations across reactive, explicit proactive, and implicit proactive help, in safety-critical and everyday settings, plus matched cases where the right answer is to stay quiet.</p></div>
-            <div><b>This clip, from seed to review</b>
-              <div class="dlg">
-                <div><b>Seed</b>A reflective metal lunch container is held at an open microwave while the user expresses uncertainty.</div>
-                <div><b>Plan</b>Reveal the container’s material. Show the microwave door opening. Intervene before heating begins.</div>
-                <div><b>Expected</b>Warn before the container is heated and suggest a microwave-safe dish.</div>
-                <div><b>Review</b>Visible cues, dialogue cues, why assistance is warranted, and a stated limitation.</div>
-              </div></div>
-          </div>
-          <div class="spot-actions"><a class="btn btn-primary" href="https://nlplab-vista-research-vista-demo.hf.space/platform" target="_blank" rel="noopener">Open the VISTA platform</a><a class="btn btn-ghost" href="https://arxiv.org/abs/2605.10579" target="_blank" rel="noopener">VISTA paper</a></div>
-        </div>
-      </div>
-    </div>
-    <p class="spot-src">Videos, dialogue, reviewed decisions, intervention times, and assistant messages are taken verbatim from the EgoArgus decision annotations (<code>dataset/paper_eval.csv</code>). The videos were generated with VISTA.</p>
-  </div>
-</section>
-
-<!-- ===== PUBLICATIONS ===== -->
 <section class="section" id="publications">
   <div class="wrap">
     <div class="section-head reveal">
-      <div><div class="eyebrow">Publications</div><h2 class="h2">By year, since 2017.</h2></div>
+      <div><div class="eyebrow">Publications</div><h2 class="h2">Full list.</h2></div>
+      <div class="pub-actions"><button class="btn btn-primary red" id="copyPubs">Copy list as text</button><a class="btn btn-light" href="https://scholar.google.com.tw/citations?user=QL-GNDQAAAAJ" target="_blank" rel="noopener">Google Scholar</a><a class="btn btn-light" data-lab="#publications" href="#">Filter by area on the lab site</a></div>
     </div>
-    <div class="pub-tools">
-      <input type="search" id="pubSearch" placeholder="Search title, author, venue…" aria-label="Search publications">
-      <div class="filters" id="pubFilters">
-        <button class="fbtn" aria-pressed="true" data-f="all">All</button>
-        <button class="fbtn" aria-pressed="false" data-f="selected">Selected</button>
-        <button class="fbtn" aria-pressed="false" data-f="situated">Situated intelligence</button>
-        <button class="fbtn" aria-pressed="false" data-f="personal">Personalization</button>
-        <button class="fbtn" aria-pressed="false" data-f="trust">Trustworthy reasoning</button>
-        <button class="fbtn" aria-pressed="false" data-f="efficient">Efficient AI</button>
-        <button class="fbtn" aria-pressed="false" data-f="journal">Journals</button>
-      </div>
-      <span class="pub-count" id="pubCount"></span>
-    </div>
-    <div id="pubList"></div>
+    <div class="formal" id="formalPubs"></div>
   </div>
 </section>
 
-<!-- ===== DEMOS ===== -->
-<section class="section tint" id="demos">
+<section class="section tint" id="honors">
   <div class="wrap">
-    <div class="section-head reveal">
-      <div><div class="eyebrow">Systems &amp; demos</div><h2 class="h2">Research you can watch running.</h2></div>
-      <p class="lead">Demo systems built by lab members, with short videos.</p>
-    </div>
-    <div class="demos" id="demoGrid">
-      <a class="demo reveal" href="https://youtu.be/u9apI9MoHF8" target="_blank" rel="noopener"><div class="thumb"><img src="assets/img/ISSR.png" alt="ISSR system" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="body"><div class="v">ACML 2025</div><h3>ISSR</h3><p>LLMs for vocabulary test distractor generation with iterative selection and self-review.</p></div></a>
-      <a class="demo reveal" href="https://youtu.be/SuiroLobtEU" target="_blank" rel="noopener" data-delay="1"><div class="thumb"><img src="assets/img/E-QGen.png" alt="E-QGen system" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="body"><div class="v">IJCAI 2024 Demo</div><h3>E-QGen</h3><p>Educational lecture abstract-based question generation.</p></div></a>
-      <a class="demo reveal" href="https://drive.google.com/file/d/15puaP0z9Ere8ctG8lzG4unj84rf2E_-a/view?usp=sharing" target="_blank" rel="noopener" data-delay="2"><div class="thumb"><img src="assets/img/ConvLogRecaller.png" alt="ConvLogRecaller system" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="body"><div class="v">SIGIR 2024 Demo</div><h3>ConvLogRecaller</h3><p>Real-time conversational information recall, with NTU NLP Lab.</p></div></a>
-      <a class="demo reveal" href="https://youtu.be/Hit4pBRYOGs" target="_blank" rel="noopener"><div class="thumb"><img src="assets/img/MAGIC.png" alt="MAGIC system" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="body"><div class="v">LREC-COLING 2024</div><h3>MAGIC</h3><p>Multi-argument generation with self-refinement for domain generalization in fact-checking.</p></div></a>
-      <a class="demo reveal" href="https://youtu.be/hLgLXMZczYo" target="_blank" rel="noopener" data-delay="1"><div class="thumb"><img src="assets/img/RefuteClaim.png" alt="RefuteClaim system" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="body"><div class="v">WWW 2024</div><h3>RefuteClaim</h3><p>Automatic fact-checking through flaw identification and explanation.</p></div></a>
-      <a class="demo reveal" href="https://youtu.be/QaeCrZThyeU" target="_blank" rel="noopener" data-delay="2"><div class="thumb"><img src="assets/img/EMNLP2023_MathEDU.png" alt="MathEDU" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="body"><div class="v">EMNLP 2023</div><h3>MathEDU</h3><p>LLMs and the future of mathematics education.</p></div></a>
-      <a class="demo reveal" href="https://youtu.be/KdIrrJAmspQ" target="_blank" rel="noopener"><div class="thumb"><img src="assets/img/FinComplaints.png" alt="Financial consumer complaints system" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="body"><div class="v">2024 法律 × 法遵科技黑客松 · 理律學堂跨領域特別獎</div><h3>金融消費者權益領航員</h3><p>NLPFIN × NYCU-NLP: refining financial consumer complaints.</p></div></a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PEOPLE ===== -->
-<section class="section" id="people">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div><div class="eyebrow">People</div><h2 class="h2">The lab.</h2></div>
-    </div>
-    <div class="pi reveal">
-      <div class="photo"><img src="assets/img/head_shot.jpg" alt="An-Zi Yen"></div>
-      <div>
-        <h3>An-Zi Yen 顏安孜</h3>
-        <div class="role">Assistant Professor, Department of Computer Science, National Yang Ming Chiao Tung University</div>
-        <p>Dr. Yen's research interests include natural language processing and information retrieval. Her work has been published in AAAI, EMNLP, WWW, SIGIR, and CIKM. She received the Honorable Mention of the ACLCLP Doctoral Dissertation Award in 2020 and was a distinguished PC member at IJCAI 2023. She served as web chair of SIGIR 2023 and as a PC member of AAAI, IJCAI, CIKM, and EACL.</p>
-        <div class="links">
-          <a class="btn btn-light" href="https://scholar.google.com.tw/citations?user=QL-GNDQAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-          <a class="btn btn-light" href="https://github.com/NYCU-NLP-Lab" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn btn-light" href="https://www.youtube.com/@NYCU_NLP_Lab" target="_blank" rel="noopener">YouTube</a>
-        </div>
-      </div>
-    </div>
-    <div class="facts">
+    <div class="section-head reveal"><div><div class="eyebrow">Honors &amp; service</div><h2 class="h2">Recognition and community work.</h2></div></div>
+    <div class="facts wide" style="margin-top:0">
       <div class="fact reveal"><h4>Honors</h4><ul><li>Distinguished PC member, IJCAI 2023</li><li>MOST Postdoctoral Researcher Academic Research Award, 2021</li><li>Honorable Mention, ACLCLP Doctoral Dissertation Award, 2020</li><li>Honorary Membership, Phi Tau Phi Scholastic Honor Society, 2020</li></ul></div>
-      <div class="fact reveal" data-delay="1"><h4>Experience</h4><ul><li>Postdoctoral Researcher, NLP Lab, National Taiwan University</li><li>Adjunct Assistant Professor, Dept. of Quantitative Finance, National Tsing Hua University</li></ul></div>
-      <div class="fact reveal" data-delay="2"><h4>Service</h4><ul><li>Web chair, SIGIR 2023</li><li>PC member: AAAI, IJCAI, CIKM, EACL, EMNLP</li></ul></div>
+      <div class="fact reveal" data-delay="1"><h4>Service</h4><ul><li>Web chair, SIGIR 2023</li><li>PC member: AAAI, IJCAI, CIKM, EACL, EMNLP</li></ul></div>
     </div>
-    <div class="members reveal">
-      <h4>PhD students</h4>
-      <div class="names"><span class="phd">Yu-Chien Tang</span><span class="phd">Yen-Shyun Huang</span></div>
-      <h4>Master's students</h4>
-      <div class="names"><span>You-Mei Huang</span><span>Hsiang-Yu Cheng</span><span>Ding-Xin Kang</span><span>Nien-Hui Huang</span><span>Yong-Xuan Zheng</span><span>Wei-Lin Wen</span><span>Ting-Shian Kuo</span><span>Lai-Sen Cao</span><span>Hong-Yuan Cheng</span><span>Yi-Fu Chen</span><span>Wei-Chia Chang</span><span>Min-Quan Wang</span><span>Tun-Chieh Yang</span><span>Chun-Ting Hou</span></div>
-      <h4>Alumni</h4>
-      <div class="names alumni"><span>Yu-Hang Deng</span><span>Bo-Cheng Pan</span><span>Min-Kuang Tsu</span><span>Yu-Tung Chou</span><span>Chun-Wei Kang</span><span>Guan-Yi He</span><span>Wei-Ling Hsu</span><span>Yu-Cheng Liu</span><span>Bo-Wei Chen</span><span>Cheng-Xin Song</span><span>Hsiu-Hung Lee</span><span>Yen-Chun Huang</span><span>Yu-Chen Kang</span><span>Jou-Chia Chiang</span></div>
-    </div>
+    <span id="experience"></span>
   </div>
 </section>
 
-<!-- ===== CONTACT ===== -->
 <section class="section dark contact" id="contact">
   <div class="wrap contact-grid">
-    <div class="reveal">
-      <div class="eyebrow">Contact</div>
-      <div class="big">Interested in joining the lab or collaborating?<br><a href="mailto:azyen@nycu.edu.tw">azyen@nycu.edu.tw</a></div>
-      <p class="lead" style="margin-top:18px">Prospective students: read a recent paper from the area you like, then write to us with what you would do next.</p>
-    </div>
+    <div class="reveal"><div class="eyebrow">Contact</div><div class="big">Department of Computer Science,<br>National Yang Ming Chiao Tung University<br><a href="mailto:azyen@nycu.edu.tw">azyen@nycu.edu.tw</a></div></div>
     <ul class="reveal" data-delay="1">
       <li><a href="mailto:azyen@nycu.edu.tw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>azyen@nycu.edu.tw</a></li>
       <li><a href="https://scholar.google.com.tw/citations?user=QL-GNDQAAAAJ" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3L2 9l10 6 10-6-10-6z"/><path d="M6 11.5V17c0 1.5 3 3 6 3s6-1.5 6-3v-5.5"/></svg>Google Scholar</a></li>
+      <li><a data-lab="" href="https://nycu-nlp-lab.github.io/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="7" cy="12" r="2.5"/><circle cx="17" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/><path d="M9 11l6-3M9 13l6 3"/></svg>NYCU NLP Lab website</a></li>
       <li><a href="https://github.com/NYCU-NLP-Lab" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-4.5 1.5-4.5-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>GitHub · NYCU-NLP-Lab</a></li>
-      <li><a href="https://www.youtube.com/@NYCU_NLP_Lab" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="6" width="19" height="12" rx="3"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor"/></svg>YouTube · NYCU_NLP_Lab</a></li>
     </ul>
   </div>
 </section>
 
-<footer><div class="wrap"><span>© NYCU NLP Lab · An-Zi Yen</span><span>Department of Computer Science, National Yang Ming Chiao Tung University, Hsinchu, Taiwan</span></div></footer>
+<footer><div class="wrap"><span>© An-Zi Yen</span><span>Department of Computer Science, National Yang Ming Chiao Tung University, Hsinchu, Taiwan</span></div></footer>
 
-<script src="data/publications.js"></script>
-<script src="assets/js/main.js"></script>
-<script src="data/egoargus_cases.js"></script>
-<script src="assets/js/spotlight.js" defer></script>
-<script src="assets/js/explainers/egoargus.js" defer></script>
-<script src="assets/js/explainers/vdar.js" defer></script>
-<script src="assets/js/explainers/refute.js" defer></script>
-<script src="assets/js/explainers/personaedit.js" defer></script>
-<script src="assets/js/explainers/mathedu.js" defer></script>
+<script src="assets/js/personal.js"></script>
 </body>
 </html>
