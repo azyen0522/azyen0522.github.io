@@ -1,400 +1,368 @@
-<!DOCTYPE HTML>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>NYCU NLP LAB</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NYCU NLP Lab — An-Zi Yen</title>
+<meta name="description" content="NYCU NLP Lab, led by An-Zi Yen at National Yang Ming Chiao Tung University: personalized, trustworthy, and efficient AI across multimodal understanding, personalization, trustworthy reasoning, and efficient systems.">
+<meta property="og:title" content="NYCU NLP Lab — An-Zi Yen">
+<meta property="og:description" content="AI that reasons, adapts, and works with people.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%232F5BFF'/%3E%3Ccircle cx='10' cy='16' r='3' fill='%23fff'/%3E%3Ccircle cx='22' cy='10' r='3' fill='%2322D3EE'/%3E%3Ccircle cx='22' cy='22' r='3' fill='%23fff'/%3E%3Cpath d='M10 16L22 10M10 16L22 22' stroke='%23fff' stroke-width='1.6'/%3E%3C/svg%3E">
+</head>
+<body>
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="#" class="image headshot"><img src="images/head_shot.jpg" alt="" /></a>
-					<div id="nav">
-						<h1><a href="#lab">NYCU NLP Lab</a><br/></h1>
-						<h1><a href="#projects">Projects</a><br/></h1>
-						<h1><a href="#publications">Publications</a><br/></h1>
-						<h1><a href="#honors">Honors</a><br/></h1>
-						<h1><a href="#contact">Contact</a><br/></h1>
-						<h1><a href="#experience">Experience</a><br/>
-					</div>
-				</div>
-			</header>
+<!-- ===== NAV ===== -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="NYCU NLP Lab home">
+      <span class="mark"><svg viewBox="0 0 32 32" fill="none"><circle cx="10" cy="16" r="3.2" fill="#fff"/><circle cx="22" cy="9" r="3.2" fill="#fff"/><circle cx="22" cy="23" r="3.2" fill="#fff"/><path d="M10 16L22 9M10 16L22 23" stroke="#fff" stroke-width="1.8"/></svg></span>
+      <span>NYCU NLP Lab<small>National Yang Ming Chiao Tung University</small></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#research">Research</a></li>
+      <li><a href="#featured">Featured</a></li>
+      <li><a href="#spotlight">Spotlight</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#demos">Demos</a></li>
+      <li><a href="#people">People</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
 
-		<!-- Main -->
-			<div id="main">
+<!-- ===== HERO ===== -->
+<section class="hero" id="top">
+  <canvas id="heroCanvas" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="eyebrow">NYCU NLP Lab · Dept. of Computer Science</div>
+    <h1>AI that <span class="grad">reasons, adapts,</span> and works with people.</h1>
+    <p class="lead">We build personalized, trustworthy, and efficient AI that brings together multimodal perception, knowledge, and reasoning to support people in daily life.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#featured">Explore featured research <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-ghost" href="#publications">Publications</a>
+    </div>
+    <div class="stats" id="stats">
+      <div class="stat"><div class="num" data-count="0" id="statPubs">0</div><div class="lbl">Peer-reviewed publications</div></div>
+      <div class="stat"><div class="num" data-count="0" id="statVenues">0</div><div class="lbl">Distinct venues, incl. EMNLP, SIGIR, WWW, AAAI</div></div>
+      <div class="stat"><div class="num" data-count="0" id="stat2026">0</div><div class="lbl">Papers at EMNLP &amp; EACL 2026</div></div>
+    </div>
+  </div>
+  <div class="scroll-cue">Scroll<span></span></div>
+</section>
 
-				<!-- One -->
-					<section id="introduction">
-						<header class="major">
-							<h2>An-Zi Yen 顏安孜<br /></h2>
-							<p>Assistant Professor, Dept. of Computer Science, National Yang Ming Chiao Tung University</p>
-								
-						</header>
-						<p>Dr. An-Zi Yen is an Assistant Professor in the Department of Computer Science at National Yang Ming Chiao Tung University. Her research interests include natural language processing and information retrieval. Her work has been published in AAAI, EMNLP, WWW, SIGIR, and so on. Dr. Yen's awards and honors include the Honorable Mention of Doctoral Dissertation Award of ACLCLP in 2020 and the distinguished PC member in IJCAI 2023. She served as the web chair of SIGIR 2023, and as PC members of representative conferences including AAAI, IJCAI, CIKM, and EACL.
-						</p>
-					</section>
+<!-- ===== RESEARCH AREAS ===== -->
+<section class="section" id="research">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div><div class="eyebrow">Research areas</div><h2 class="h2">Four questions we keep coming back to.</h2></div>
+      <p class="lead">Four directions, one goal: AI that understands people and the world they live in, and helps them well.</p>
+    </div>
+    <div class="areas">
+      <article class="area reveal" data-area="situated">
+        <div class="glow"></div>
+        <div class="icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16s4.5-7 12-7 12 7 12 7-4.5 7-12 7S4 16 4 16z"/><circle cx="16" cy="16" r="3.5"/><path d="M16 4v2M16 26v2"/></svg></div>
+        <a class="flag" href="assistants.html">Flagship theme →</a>
+        <h3>Multimodal understanding &amp; situated intelligence</h3>
+        <p>How can AI integrate what it sees, hears, and reads to understand an environment, an event, and what the user needs right now?</p>
+        <div class="chips"><span class="chip">EgoArgus</span><span class="chip">VISTA</span><span class="chip">ConvLogRecaller</span><span class="chip">Visual lifelog retrieval</span></div>
+        <a class="more" href="#publications" data-filter="situated">See papers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+      <article class="area reveal" data-area="personal" data-delay="1">
+        <div class="glow"></div>
+        <div class="icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="11" r="5"/><path d="M6 27c1.5-5 5.5-7.5 10-7.5s8.5 2.5 10 7.5"/><path d="M24 6l1.2 2.4L28 9.5l-2.8 1.1L24 13l-1.2-2.4L20 9.5l2.8-1.1z"/></svg></div>
+        <h3>Personalization &amp; adaptive intelligence</h3>
+        <p>How can AI use personal knowledge and interaction history to adapt to each user and each task?</p>
+        <div class="chips"><span class="chip">PersonaEdit</span><span class="chip">Personal knowledge base QA</span><span class="chip">Personalized graph LLM</span><span class="chip">LED</span></div>
+        <a class="more" href="#publications" data-filter="personal">See papers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+      <article class="area reveal" data-area="trust" data-delay="2">
+        <div class="glow"></div>
+        <div class="icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3l10 4v8c0 7-4.5 11.5-10 14C10.5 26.5 6 22 6 15V7l10-4z"/><path d="M11.5 16l3 3 6-6"/></svg></div>
+        <h3>Trustworthy reasoning &amp; assistance</h3>
+        <p>How can AI reason from evidence and give help that is understandable, checkable, and appropriate?</p>
+        <div class="chips"><span class="chip">RefuteClaim</span><span class="chip">MAGIC</span><span class="chip">ZARA</span><span class="chip">MathEDU</span></div>
+        <a class="more" href="#publications" data-filter="trust">See papers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+      <article class="area reveal" data-area="efficient" data-delay="3">
+        <div class="glow"></div>
+        <div class="icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16h7l3-8 4 16 3-8h7"/></svg></div>
+        <h3>Efficient &amp; resource-aware AI</h3>
+        <p>How can AI allocate models and data to what a task needs, balancing quality against cost?</p>
+        <div class="chips"><span class="chip">VDAR-Router</span><span class="chip">Confidence-driven selection</span><span class="chip">Representative sample selection</span></div>
+        <a class="more" href="#publications" data-filter="efficient">See papers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
 
+<!-- ===== FEATURED (interactive explainers) ===== -->
+<section class="section dark" id="featured">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div><div class="eyebrow">Featured research</div><h2 class="h2">Play with the idea.</h2></div>
+      <p class="lead">The question, the mechanism, and what we found.</p>
+    </div>
+    <div class="tabs-wrap reveal"><button class="tab-arrow" id="tabPrev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg></button><button class="tab-arrow right" id="tabNext" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+    <div class="tabs" role="tablist" id="featTabs">
+      <button class="tab" role="tab" aria-selected="true" data-panel="egoargus"><b>EgoArgus</b><small>EMNLP 2026 · Which modality to trust?</small></button>
+      <button class="tab" role="tab" aria-selected="false" data-panel="vdar"><b>VDAR-Router</b><small>EMNLP 2026 Findings · Route by difficulty</small></button>
+      <button class="tab" role="tab" aria-selected="false" data-panel="personaedit"><b>PersonaEdit</b><small>EMNLP 2026 Findings · Edit, don't retrieve</small></button>
+      <button class="tab" role="tab" aria-selected="false" data-panel="mathedu"><b>MathEDU</b><small>EACL 2026 · Feedback on every step</small></button>
+      <button class="tab" role="tab" aria-selected="false" data-panel="refute"><b>RefuteClaim</b><small>WWW 2024 · Name the flaw</small></button>
+    </div>
+    <div class="tab-rail"><span id="tabRail"></span></div>
+    </div>
 
-					<section id="lab">
-						<a name="lab"></a><h2>Welcome to NYCU NLP Lab</h2>
-						<div class="row">
-							<ul>
-								Our major research lies in Natural Language Processing (NLP) and Information Retrieval (IR). 
-								We aim to improve and adapt natural language understanding and generation techniques in various applications. 
-								Ongoing research topics include:
-								<li>Question Generation and Answering
-									<ul>
-										<li>Knowledge Base Question Answering</li>
-										<li>Multimodal Question Answering</li>
-										<li>Retrieval Augmented Generation</li>
-									</ul>
-								</li>
-								<li>Human-Centered AI
-									<ul>
-										<li>Proactive AI Assistants</li>
-										<li>Human-AI Collaboration</li>
-										<li>User Modeling</li>
-									</ul>
-								</li>
-								<li>NLP for Social Good
-									<ul>
-										<li>Trustworthy AI</li>
-										<li>Natural Legal Language Processing</li>
-										<li>Social Media Analysis</li>
-									</ul>
-								</li>
-							</ul>
-							<ul>
-								<li>Members: Please refer to <a href="member.html">Lab Members</a> for more details.</li>
-								<li>Resource: <a href="https://github.com/NYCU-NLP-Lab">GitHub</a></li>
-								<li>YouTube Channel: <a href="https://www.youtube.com/@NYCU_NLP_Lab">YouTube</a></li>
-							</ul>
-					</section>
+    <div class="panel active" id="panel-egoargus" role="tabpanel">
+      <div>
+        <span class="venue">EMNLP 2026 · Main conference</span>
+        <h3>EgoArgus: Benchmarking VLMs as Situational Assistants</h3>
+        <p class="q">An assistant sees your kitchen and hears you say "the stove is off." Which one should it believe?</p>
+        <p>Existing egocentric benchmarks test visual understanding in isolation. EgoArgus asks a harder question: when the camera and the user disagree, can the model tell which modality is trustworthy and decide whether to step in at all?</p>
+        <div class="kv">
+          <div><b>Dataset</b>Human-annotated dialogue-video scenarios across five daily settings, with visual and language cues that are helpful, irrelevant, or conflicting.</div>
+          <div><b>Tasks</b>Understanding (what is going on) and decision (should the assistant intervene, and how).</div>
+          <div><b>Finding</b>Current VLMs still struggle to arbitrate between modalities, and existing bias-mitigation methods help only within narrow limits.</div>
+        </div>
+        <div class="links"><a class="btn btn-primary" href="https://arxiv.org/abs/2608.25561" target="_blank" rel="noopener">Read the paper</a><a class="btn btn-ghost" href="https://arxiv.org/abs/2605.10579" target="_blank" rel="noopener">VISTA companion demo</a></div>
+      </div>
+      <div class="stage" id="ex-egoargus"><div class="ex-stage"></div><div class="ex-controls"></div><div class="ex-note"></div></div>
+    </div>
 
-					<section id="projects">
-						<h2>Recent Projects</h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="https://openreview.net/forum?id=X6Gr7CHO2y" class="image fit thumb"><img class="imgshowcase" src="images/ISSR.png" alt="" /></a>
-								<h3>ACML 2025 ISSR</h3>
-								<p>LLMs for Vocabulary Test Distractor Generation <a href="https://youtu.be/u9apI9MoHF8">[video]</a></p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="https://arxiv.org/abs/2504.09903" class="image fit thumb"><img class="imgshowcase" src="images/Refining Financial Consumer Complaints.png" alt="" /></a>
-								<h3>2024 法律 X 法遵科技黑客松 (榮獲理律學堂跨領域特別獎)</h3>
-								<p>NLPFIN X NYCU-NLP | 金融消費者權益領航員 <a href="https://youtu.be/KdIrrJAmspQ">[video]</a></p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="http://arxiv.org/abs/2404.13547" class="image fit thumb"><img class="imgshowcase" src="images/E-QGen.png" alt="" /></a>
-								<h3>IJCAI 2024 E-QGen</h3>
-								<p>Educational Lecture Abstract-based Question Generation <a href="https://youtu.be/SuiroLobtEU">[video]</a></p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="" class="image fit thumb"><img class="imgshowcase" src="images/ConvLogRecaller.png" alt=""/></a>
-								<h3>SIGIR 2024 ConvLogRecaller</h3>
-								<p>Real-Time Conversational Information Recall <a href="https://drive.google.com/file/d/15puaP0z9Ere8ctG8lzG4unj84rf2E_-a/view?usp=sharing">[video]</a></p>
-								<p>(Collaboration with NTU NLP Lab)</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="" class="image fit thumb"><img class="imgshowcase" src="images/MAGIC.png" alt="" /></a>
-								<h3>COLING 2024 MAGIC</h3>
-								<p>Domain Generalization in Automatic Fact-Checking <a href="https://youtu.be/Hit4pBRYOGs">[video]</a></p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="https://arxiv.org/abs/2401.15312" class="image fit thumb"><img class="imgshowcase" src="images/RefuteClaim.png" alt="" /></a>
-								<h3>WWW 2024 RefuteClaim</h3>
-								<p>Automatic Fact-Checking through Flaw Identification and Explanation <a href="https://youtu.be/hLgLXMZczYo">[video]</a></p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="https://aclanthology.org/2023.findings-emnlp.201/" class="image fit thumb"><img class="imgshowcase" src="images/EMNLP2023_MathEDU.png" alt="" /></a>
-								<h3>EMNLP 2023 MathEDU</h3>
-								<p>LLMs and the Future of Mathematics Education <a href="https://youtu.be/QaeCrZThyeU">[video]</a></p>
-							</article>
-							<!--
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="https://bit.ly/3LRcpUK" class="image fit thumb"><img class="imgshowcase" src="https://bit.ly/46ykXIg" alt="" /></a>
-								<h3>EMNLP 2023 MathEDU</h3>
-								<p>LLMs and the Future of Mathematics Education</p>
-							</article>
-							-->
-						</div>
-						<ul class="actions">
-							<li><a href="projects.html" class="button">Project Showcase</a></li>
-						</ul>
-					</section>
+    <div class="panel" id="panel-vdar" role="tabpanel">
+      <div>
+        <span class="venue">EMNLP 2026 · Findings</span>
+        <h3>VDAR-Router: Adaptive LLM Routing via Verbalized Query Difficulty</h3>
+        <p class="q">Two queries can use the same words and still be worlds apart in difficulty. Why route them the same way?</p>
+        <p>Most routers judge a query by its surface semantics or embedding. VDAR-Router first writes out an explicit difficulty analysis, retrieves past queries with a similar difficulty profile, and uses their outcomes to pick the model that balances cost and quality.</p>
+        <div class="kv">
+          <div><b>Step 1</b>Verbalize the difficulty of the incoming query.</div>
+          <div><b>Step 2</b>Retrieve historical records with similar difficulty profiles.</div>
+          <div><b>Step 3</b>Estimate each candidate model's suitability and select under a cost-performance reward.</div>
+        </div>
+        <div class="links"><a class="btn btn-primary" href="https://arxiv.org/abs/2607.18098" target="_blank" rel="noopener">Read the paper</a><a class="btn btn-ghost" href="https://arxiv.org/abs/2602.22090" target="_blank" rel="noopener">Related: confidence-driven selection</a></div>
+      </div>
+      <div class="stage" id="ex-vdar"><div class="ex-stage"></div><div class="ex-controls"></div><div class="ex-note"></div></div>
+    </div>
 
+    <div class="panel" id="panel-refute" role="tabpanel">
+      <div>
+        <span class="venue">WWW 2024</span>
+        <h3>How We Refute Claims: Fact-Checking through Flaw Identification</h3>
+        <p class="q">"False" is not an explanation. What exactly is wrong with the claim?</p>
+        <p>RefuteClaim reframes fact-checking as flaw-oriented verification: generate the aspects a claim should be judged on, identify the flaw under each aspect, and explain the verdict. FlawCheck, our dataset, distills expert fact-checker reviews into aspects and flaws.</p>
+        <div class="kv">
+          <div><b>Task</b>Aspect generation and flaw identification, in addition to the verdict.</div>
+          <div><b>Dataset</b>FlawCheck, built from expert reviews.</div>
+          <div><b>Finding</b>RefuteClaim is especially strong at classifying and elucidating false claims.</div>
+        </div>
+        <div class="links"><a class="btn btn-primary" href="https://arxiv.org/abs/2401.15312" target="_blank" rel="noopener">Read the paper</a><a class="btn btn-ghost" href="https://youtu.be/hLgLXMZczYo" target="_blank" rel="noopener">Watch the demo</a></div>
+      </div>
+      <div class="stage" id="ex-refute"><div class="ex-stage"></div><div class="ex-controls"></div><div class="ex-note"></div></div>
+    </div>
 
-				<!-- Two -->
-					<section id="publications">
-						<a name="publications"></a><h2>Publications</h2>
-						<div class="row">
-							<ol class="publications">
-								<h4>Journal Articles:</h4>
-								<li>
-									An-Zi Yen, Min-Huan Fu, Wei-Hong Ang, Tai-Te Chu, Ssu-Hao Tsai, Hen-Hsen Huang and Hsin-Hsi Chen (2023).
-									“Visual Lifelog Retrieval: Humans and Machines Interpretation on First-Person Images.” 
-									<i>Multimedia Tools and Applications.</i>
-									(<a href="https://link.springer.com/article/10.1007/s11042-023-14344-x">Link</a>)
-								</li>
-								<li>
-									An-Zi Yen, Hen-Hsen Huang and Hsin-Hsi Chen (2019).
-									“Multimodal joint learning for personal knowledge base construction from Twitter-based lifelogs.”
-									<i>Information Processing & Management.</i>
-									(<a href="//doi.org/10.1016/j.ipm.2019.102148">Link</a>)
-								</li>
-								<li>
-									An-Zi Yen, Hen-Hsen Huang and Hsin-Hsi Chen (2019).
-									“Learning English-Chinese Bilingual Word Representations from Sentence-Aligned Parallel Corpus.”
-									<i>Computer Speech and Language</i>, 56:52-72.
-									(<a href="//doi.org/10.1016/j.csl.2019.01.002">Link</a>)
-								</li>
-							</ol>
-							<ol class="publications">
-								<br /><h4>Conference Papers:</h4>
-								<li>
-									Yu-Hsiang Liu, Yu-Chien Tang, and An-Zi Yen (2026). “VISTA: A Controllable Platform for Generating and Auditing Egocentric Assistance Scenarios.” In Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing: System Demonstrations, October 24-29, 2026, Budapest, Hungary.
-								</li>
-								<li>
-									Yu-Chien Tang, Yu-Hsiang Liu, and An-Zi Yen (2026). “EgoArgus: Benchmarking VLMs as Situational Assistants for Modality-Grounded User Supports.” In Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing, October 24-29, 2026, Budapest, Hungary. (acceptance rate: 15.4%=2,719/17,669)
-								</li>
-								<li>
-									Yu-Chien Tang, Jun-Chen Hung, Wen-Chih Peng, and An-Zi Yen (2026). “VDAR-Router: Adaptive LLMs Routing via Verbalized Query Difficulty Analysis Retrieval.” In Findings of the Association for Computational Linguistics: EMNLP 2026, October 24-29, 2026, Budapest, Hungary. (acceptance rate: 14.3%=2,533/17,669)
-								</li>
-								<li>
-									You-Mei Huang, Chung-Chi Chen, and An-Zi Yen (2026). “PersonaEdit: Representative Sample Selection for Personalized Model Editing.” In Findings of the Association for Computational Linguistics: EMNLP 2026, October 24-29, 2026, Budapest, Hungary. (acceptance rate: 14.3%=2,533/17,669)
-								</li>
-								<li>
-									Wei-Ling Hsu, Yu-Chien Tang, An-Zi Yen (2026). “MathEDU: Feedback Generation on Problem-Solving Processes for Mathematical Learning Support.” In Proceedings of the 19th Conference of the European Chapter of the Association for Computational Linguistics, March 24-29, 2026, Rabat, Morocco. (acceptance rate: 20.1%)
-								</li>
-								<li>
-									Bo-Wei Chen, Chung-Chi Chen, An-Zi Yen (2026). “Confidence-Driven Multi-Scale Model Selection for Cost-Effective NLU” In Findings of the 19th Conference of the European Chapter of the Association for Computational Linguistics, March 24-29, 2026, Rabat, Morocco. (acceptance rate: 16.1%)
-								</li>
-								<li>
-									Che-Wei Huang, An-Zi Yen, Hen-Hsen Huang, and Hsin-Hsi Chen (2025). “Follow-up Question Modeling for Open-Retrieval Conversations with Wh-Questions.” In Proceedings of the 24th IEEE/WIC International Conference on Web Intelligence and Intelligent Agent Technology (WI-IAT 2025), 15-18 November 2025, London, United Kingdom.
-								</li>
-								<li>
-									Chia Cheng Chang, An-Zi Yen, Hen-Hsen Huang, and Hsin-Hsi Chen (2025). “Personalized Graph-Empowered Large Language Model for Proactive Information Access.” In Proceedings of the 24th IEEE/WIC International Conference on Web Intelligence and Intelligent Agent Technology (WI-IAT 2025), 15-18 November 2025, London, United Kingdom.
-								</li>
-								<li>
-									Yu-Cheng Liu and An-Zi Yen (2025). “Iterative Selection with Self-Review for Vocabulary Test Distractor Generation.” In Proceedings of the 17th Asian Conference on Machine Learning (ACML 2025), 09-12 December 2025, Taipei, Taiwan. (Conference Track)
-								</li>
-								<li>
-									Yong-En Tian, Yu-Chien Tang, Kuang-Da Wang, An-Zi Yen, and Wen-Chih Peng (2025). “Template-Based Financial Report Generation in Agentic and Decomposed Information Retrieval.” In Proceedings of the 48th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '25). Association for Computing Machinery, New York, NY, USA, 2706–2710. 
-								</li>
-								<li>
-									Hsiu-Hung Lee, Chung-Chi Chen, and An-Zi Yen. 2025. “RAG-Enhanced Evidence Recommendation in Financial Legal Resolutions.” In Companion Proceedings of the ACM on Web Conference 2025 (WWW '25). Association for Computing Machinery, New York, NY, USA, 1096–1099.
-								</li>
-								<li>
-									Yu-Fei Shih, An-Zi Yen, Hen-Hsen Huang, Hsin-Hsi Chen (2024). “Visual Lifelog Retrieval through Captioning-Enhanced Interpretation” In Proceedings of the 2024 IEEE International Conference on Big Data (IEEE BigData 2024), December 15-18, Washington DC, USA. (Short Paper, Acceptance rate = 19.7% = 130/660).
-								</li>
-								<li>
-									Mao-Siang Chen and An-Zi Yen. (2024). E-QGen: Educational Lecture Abstract-based Question Generation System. In Proceedings of the 33rd International Joint Conference on Artificial Intelligence (IJCAI 2024), Demonstration Track, Jeju, South Korea.
-									(Demo Paper, acceptance rate: 60/116=51.7%)
-								</li>
-								<li>
-									Yuan-Chi Lee, An-Zi Yen, Hen-Hsen Huang and Hsin-Hsi Chen (2024).
-									“ConvLogRecaller: Real-Time Conversational Lifelog Recaller.”
-									In Proceedings of 47nd International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2024), July 14-18, 2024, Washington D.C., USA.
-									(Demo Paper, acceptance rate: 23/47=49%).
-								</li>
-								<li>
-									Wei-Yu Kao and An-Zi Yen (2024). “How We Refute Claims: Automatic Fact-Checking through Flaw Identification and Explanation.” In Proceedings of the Web Conference 2024 (WWW 2024), Singapore, May 13-17, 2024. (Short Paper)
-								</li>
-								<li>
-									Wei-Yu Kao and An-Zi Yen (2024). “MAGIC: Multi-Argument Generation with Self-Refinement for Domain Generalization in Automatic Fact-Checking.” In Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024), May 20-25, Torino, Italy. (Long Paper)
-								</li>
-								<li>
-									An-Zi Yen and Wei-Ling Hsu (2023). “Three Questions Concerning the Use of Large Language Models to Facilitate Mathematics Learning.” In Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing (EMNLP 2023), December 6-10, Singapore. (Finding Paper)
-								</li>
-								<li>
-									Yu-Chien Tang, Wei-Yao Wang, An-Zi Yen, and Wen-Chih Peng (2023). “RSVP: Customer Intent Detection via Agent Response Contrastive and Generative Pre-Training.” In Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing (EMNLP 2023), December 6-10, Singapore. (Finding Paper)
-								</li>
-								<li>
-									Wei-Lin Chen, An-Zi Yen, Cheng-Kuang Wu, Hen-Hsen Huang, and Hsin-Hsi Chen (2023). “ZARA: Improving Few-Shot Self-Rationalization for Small Language Models.” In Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing (EMNLP 2023), December 6-10, Singapore. (Finding Paper)
-								</li>
-								<li>
-									Keat Teng Swai, An-Zi Yen, Hen-Hsen Huang, Hsin-Hsi Chen (2023). “Multi-Perspective Sentiment Analysis on Life Events with Sentiment Cause Identification.” In Proceedings of the IEEE/WIC International Conference on Web Intelligence and Intelligent Agent Technology (WI-IAT 2023), October 26-29, Venice, Italy. (Acceptance rate: 27.92%)
-								</li>
-								<li>
-									Hong-Jin Tsai, An-Zi Yen, Hen-Hsen Huang, and Hsin-Hsi Chen (2023). “Citation Intent Classification and Its Supporting Evidence Extraction for Citation Graph Construction.” In Proceedings of the 32nd ACM International Conference on Information and Knowledge Management (CIKM 2023), October 21-25, Birmingham, UK. (Full paper, acceptance rate: 24%=354/1472)
-								</li>
-								<li>
-									Meng-Huan Liu, An-Zi Yen, Hen-Hsen Huang, and Hsin-Hsi Chen (2023). “ContributionSum: Generating Disentangled Contributions for Scientific Papers.” In Proceedings of the 32nd ACM International Conference on Information and Knowledge Management (CIKM 2023), October 21-25, Birmingham, UK. (Resource paper, acceptance rate: 27%=22/81)
-								</li>
-								<li>
-									Yi-Pei Chen, An-Zi Yen, Hen-Hsen Huang, Hideki Nakayama and Hsin-Hsi Chen (2023). 
-									"LED: A Dataset for Life Event Extraction from Dialogs." 
-									In Proceedings of the 17th Conference of the European Chapter of the Association for Computational Linguistics (EACL 2023), May 2-6, Dubrovnik, Croatia. 
-									(Finding Paper)
-								</li>
-								<li>
-									You-En Lin, An-Zi Yen, Hen-Hsen Huang and Hsin-Hsi Chen (2022). 
-									“SEEN: Structured Event Enhancement Network for Explainable Need Detection of Information Recall Assistance.” 
-									In Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing (EMNLP 2022), December 7-11, Abu Dhabi, the United Arab Emirates.
-								</li>
-								<li>
-									Wei-Lin Chen, An-Zi Yen, Hen-Hsen Huang and Hsin-Hsi Chen (2022). 
-									"Learning to Generate Explanation from e-Hospital Services for Medical Suggestion." 
-									In Proceedings of the 29th International Conference on Computational Linguistics (COLING 2022), October 12-17, Gyeongju, Republic of Korea.
-								</li>
-								<li>
-									An-Zi Yen, Hen-Hsen Huang and Hsin-Hsi Chen (2022). 
-									“Unanswerable Question Correction and Explanation over Personal Knowledge Base.” 
-									In Proceedings of the 31st ACM International Conference on Information and Knowledge Management (CIKM 2022), October 17-21, Hybrid Conference, Hosted in Atlanta, Georgia, USA.
-								</li>
-								<li>
-									Po-Cheng Wu, An-Zi Yen, Hen-Hsen Huang and Hsin-Hsi Chen (2022). 
-									"Incorporating Peer Reviews and Rebuttal Counter-Arguments for Meta-Review Generation." 
-									In Proceedings of the 31st ACM International Conference on Information and Knowledge Management (CIKM 2022), October 17-21, Hybrid Conference, Hosted in Atlanta, Georgia, USA.
-								</li>
-								<li>
-									Fa-Hsuan Hsiao, An-Zi Yen, Hen-Hsen Huang and Hsin-Hsi Chen (2022).
-									“Modeling Inter Round Attack of Online Debaters for Winner Prediction.”
-									In Proceedings of the Web Conference 2022 (WWW 2022), April 25-29, 2022.
-									(full paper, acceptance rate=17.7%=323/1822)
-								</li>
-								<li>
-									Pei-Wei Kao, An-Zi Yen, Hen-Hsen Huang, and Hsin-Hsi Chen. (2021). 
-									“ConvLog-Miner: A Real-Time Conversational Lifelog Miner.” 
-									In Proceedings of the Thirtieth International Joint Conference on Artificial Intelligence (IJCAI 2021), pages 4992-4995, 
-									Demonstration Track, Montreal, Canada.
-								</li>
-								<li>
-									An-Zi Yen, Hen-Hsen Huang, and Hsin-Hsi Chen (2021).
-									“Unanswerable Question Correction in Question Answering over Personal Knowledge Base.”
-									In Proceedings of the Thirty-Fifth AAAI Conference on Artificial Intelligence (AAAI 2021), February 2-9, 2021.
-									(full paper, acceptance rate: 21%=1692/7911)
-								</li>
-								<li>
-									An-Zi Yen, Hen-Hsen Huang, and Hsin-Hsi Chen (2021). “Ten Questions in Lifelog Mining and Information Recall.” In Proceedings of ACM International Conference on Multimedia Retrieval 2021 (ICMR 2021), August 21-24, 2021, Taipei, Taiwan.
-								</li>
-								<li>
-									Min-Huan Fu, An-Zi Yen, Hen-Hsen Huang and Hsin-Hsi Chen (2020).
-									“Incorporating Semantic Knowledge for Visual Lifelog Activity Recognition.”
-									In Proceedings of ACM International Conference on Multimedia Retrieval 2020 (ICMR 2020), June 8-11, Dublin, Ireland.
-								<li>
-									An-Zi Yen, Hen-Hsen Huang and Hsin-Hsi Chen (2019).
-									“Personal Knowledge Base Construction from Text-based Lifelogs.”
-									In Proceedings of 42nd International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2019), July 21-25, 2019, Paris, France.
-									(full paper, acceptance rate: 84/426).
-								</li>
-								<li>
-									Tsung-Han Yang, Hen-Hsen Huang, An-Zi Yen and Hsin-Hsi Chen (2018).
-									“Transfer of Frames from English FrameNet to Construct Chinese FrameNet: A Bilingual Corpus-Based Approach.”
-									In Proceedings of 11th Edition of the Language Resources and Evaluation Conference (LREC 2018), May 7-12, 2018, Miyazaki, Japan, 868-872.
-								</li>
-								<li>An-Zi Yen, Hen-Hsen Huang and Hsin-Hsi Chen (2018).
-									“Detecting Personal Life Events fom Twitter by Multi-Task LSTM.”
-									In Proceedings of the Web Conference 2018 (WWW 2018), poster, April 23-27, 2018, Lyon, France.
-								</li>
-								<li>Hen-Hsen Huang, An-Zi Yen and Hsin-Hsi Chen (2017).
-									“MKDS: A Medical Knowledge Discovery System Learned from Electronic Medical Records (Demonstration).”
-									In Proceedings of 13th Asia Information Retrieval Societies Conference (AIRS 2017), November 22-24, 2017, Jeju island, Korea.
-								</li>
-								<li>
-									An-Zi Yen, Hen-Hsen Huang, and Hsin-Hsi Chen (2017).
-									“Fusing Domain-Specific Data with General Data for In-Domain Applications.”
-									In Proceedings of 2017 IEEE/WIC/ACM International Conference on Web Intelligence (WI 2017), August 23-26, 2017, Leipzig, Germany, 566-572.
-								</li>
-							</ol>
-							<ol class="publications">		
-								<br /><h4>Other Publication:</h4>
-								<li>
-									Yu-Cheng Liu and An-Zi Yen. “ISSR: Iterative Selection with Self-Review for Vocabulary Test Distractor Generation.” arXiv preprint arXiv:2501.03462 (2024).
-									(<a href="https://arxiv.org/abs/2501.03462">Link</a>)
-								</li>
-								<li>
-									Ke-Ching Chang, Chung-Chi Chen, and An-Zi Yen. “Paraphrase-Aligned Machine Translation.” arXiv preprint arXiv:2412.05916 (2024).
-									(<a href="https://arxiv.org/abs/2412.05916">Link</a>)
-								</li>
-								<li>
-									An-Zi Yen, Cheng-Kuang Wu and Hsin-Hsi Chen (2023). 
-									"Opportunities and challenges of explainable artificial intelligence in medicine: toward causability for physicians, developers, and patients."
-									Artificial Intelligence, Machine Learning, and Deep Learning in Precision Medicine in Liver Diseases, 281-307.
-								</li>
-							</ol>		
-					</section>
+    <div class="panel" id="panel-personaedit" role="tabpanel">
+      <div>
+        <span class="venue">EMNLP 2026 · Findings</span>
+        <h3>PersonaEdit: Representative Sample Selection for Personalized Model Editing</h3>
+        <p class="q">A user has told the model hundreds of things about themselves. Which few should be written into its weights?</p>
+        <p>Retrieval-based personalization depends on retrieval quality and degrades over long-term interactions. Model editing writes new knowledge directly into the parameters, but editing every user sample is costly and the edits interfere with each other. PersonaEdit clusters the hidden representations of a user's data and picks representative samples by proportional stratified sampling.</p>
+        <div class="kv">
+          <div><b>Problem</b>Scaling model editing to personalization: many edits cost more and interfere.</div>
+          <div><b>Idea</b>Cluster hidden representations, then sample representatives in proportion to each cluster's size.</div>
+          <div><b>Finding</b>Model editing is an effective route to personalization when the editing samples are chosen well.</div>
+        </div>
+        <div class="links"><a class="btn btn-primary" href="https://arxiv.org/abs/2608.27816" target="_blank" rel="noopener">Read the paper</a></div>
+      </div>
+      <div class="stage" id="ex-personaedit"><div class="ex-stage"></div><div class="ex-controls"></div><div class="ex-note"></div></div>
+    </div>
 
-				<!-- Four -->
-					<section id="honors">
-						<a name="honors"></a><h2>Honors</h2>
-						<div class="row">
-							<ul>
-								<li>The distinguished PC member in IJCAI 2023</li>
-								<li>2021 MOST Postdoctoral Researcher Academic Research Award</li>
-								<li>Honorable Mention, Doctoral Dissertation Award of ACLCLP, 2020</li>
-								<li>Honorary Membership, The Phi Tau Phi Scholastic Honor Society, 2020</li>
-							</ul>
-						</div>
-					</section>
+    <div class="panel" id="panel-mathedu" role="tabpanel">
+      <div>
+        <span class="venue">EACL 2026 · Main conference</span>
+        <h3>MathEDU: Feedback Generation on Problem-Solving Processes</h3>
+        <p class="q">A student's answer is wrong. Where did the reasoning go off track, and what should the teacher say?</p>
+        <p>MathEDU pairs real student problem-solving processes with teacher-written feedback, and evaluates models on three hierarchical tasks: is the answer correct, which step is wrong, and what feedback would help.</p>
+        <div class="kv">
+          <div><b>Task 1</b>Answer correctness classification.</div>
+          <div><b>Task 2</b>Error identification at the step level.</div>
+          <div><b>Task 3</b>Feedback generation, compared against teacher-written feedback.</div>
+          <div><b>Finding</b>Fine-tuning helps with correctness and locating the wrong step, but generated feedback still falls well short of teachers'.</div>
+        </div>
+        <div class="links"><a class="btn btn-primary" href="https://arxiv.org/abs/2505.18056" target="_blank" rel="noopener">Read the paper</a><a class="btn btn-ghost" href="https://aclanthology.org/2023.findings-emnlp.201/" target="_blank" rel="noopener">Position paper (EMNLP 2023)</a></div>
+      </div>
+      <div class="stage" id="ex-mathedu"><div class="ex-stage"></div><div class="ex-controls"></div><div class="ex-note"></div></div>
+    </div>
+  </div>
+</section>
 
-					<section id="contact">
-						<a name="contact"></a><h2>Contact Information</h2>
-						<div class="row">
-							<ul>
-								<li>Email: <a href="mailto:azyen@nycu.edu.tw">azyen@nycu.edu.tw</a></li>
-								<li>Find me on <a href="https://scholar.google.com.tw/citations?user=QL-GNDQAAAAJ">Google Scholar</a></li>
-							</ul>
-						</div>
-					</section>
+<!-- ===== SPOTLIGHT: flagship theme ===== -->
+<section class="section tint" id="spotlight">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div><div class="eyebrow">Flagship theme · Situational assistants</div><h2 class="h2">Personal AI assistants that see, listen, and know when to act.</h2></div>
+      <p class="lead">Our largest research line builds assistants that see the world from your point of view, listen to what you say, and decide whether, when, and how to help.</p>
+    </div>
+    <div class="series-tabs reveal" role="tablist">
+      <button class="series-tab" role="tab" aria-selected="true" data-pane="egoargus"><b>EgoArgus</b><small>EMNLP 2026 · Benchmark: which modality to trust?</small></button>
+      <button class="series-tab" role="tab" aria-selected="false" data-pane="vista"><b>VISTA</b><small>EMNLP 2026 Demo · Platform: generate the scenarios</small></button>
+      <a class="series-tab more" href="assistants.html"><b>Full series →</b><small>Overview, timeline, dataset, platform, papers</small></a>
+    </div>
+    <div class="series-pane active reveal" data-pane="egoargus">
+    <div class="spot-player reveal">
+      <div class="spot-video">
+        <video id="spotVideo" muted playsinline loop preload="metadata" poster="assets/video/mall.jpg"></video>
+        <div class="spot-bubble" id="spotDialogue"></div>
+        <div class="spot-assist" id="spotAssist"></div>
+        <div class="spot-timeline"><div class="spot-track"><div class="spot-fill" id="spotFill"></div><div class="spot-marker" id="spotMarker"></div></div></div>
+      </div>
+      <div class="spot-side">
+        <div class="case-tabs" role="tablist">
+          <button class="case-tab" role="tab" aria-selected="true"><img src="assets/video/mall.jpg" alt="">Mall</button>
+          <button class="case-tab" role="tab" aria-selected="false"><img src="assets/video/baby_tray.jpg" alt="">Baby and tray</button>
+          <button class="case-tab" role="tab" aria-selected="false"><img src="assets/video/metal_mug.jpg" alt="">Metal mug</button>
+          <button class="case-tab" role="tab" aria-selected="false"><img src="assets/video/car_roof.jpg" alt="">Car roof</button>
+          <button class="case-tab" role="tab" aria-selected="false"><img src="assets/video/sidewalk.jpg" alt="">Sidewalk</button>
+        </div>
+        <div class="spot-kv">
+          <div><b>What the user says</b><div class="variants" id="spotVariants"></div><p class="tl" id="spotHint"></p><div class="dlg" id="spotDlg"></div></div>
+          <div><b>Reviewed decision</b><p id="spotDecision"></p><p class="msg" id="spotMsg"></p></div>
+          <div><b>Why</b><p class="tl" id="spotWhy"></p></div>
+        </div>
+        <div class="spot-actions"><button class="btn btn-ghost" id="spotReplay">Replay</button><a class="btn btn-ghost" href="https://github.com/NYCU-NLP-Lab/EgoArgus" target="_blank" rel="noopener">Dataset &amp; code</a><a class="btn btn-primary" href="https://arxiv.org/abs/2608.25561" target="_blank" rel="noopener">EgoArgus paper</a></div>
+      </div>
+    </div>
+    </div>
+    <div class="series-pane" data-pane="vista">
+      <div class="spot-player">
+        <div class="spot-video"><video id="vistaClip" muted playsinline loop preload="metadata" poster="assets/img/vista/metal-container-microwave.webp" src="assets/video/vista_microwave.mp4"></video><span class="vtag">Generated by VISTA</span></div>
+        <div class="spot-side">
+          <div class="spot-kv">
+            <div><b>What VISTA does</b><p>Rare or risky assistance situations are hard, costly, or unsafe to film. VISTA takes a one-line scenario seed and produces an editable plan, an egocentric video, and an auditable review trail. The platform ships 14 reviewed demonstrations across reactive, explicit proactive, and implicit proactive help, in safety-critical and everyday settings, plus matched cases where the right answer is to stay quiet.</p></div>
+            <div><b>This clip, from seed to review</b>
+              <div class="dlg">
+                <div><b>Seed</b>A reflective metal lunch container is held at an open microwave while the user expresses uncertainty.</div>
+                <div><b>Plan</b>Reveal the container’s material. Show the microwave door opening. Intervene before heating begins.</div>
+                <div><b>Expected</b>Warn before the container is heated and suggest a microwave-safe dish.</div>
+                <div><b>Review</b>Visible cues, dialogue cues, why assistance is warranted, and a stated limitation.</div>
+              </div></div>
+          </div>
+          <div class="spot-actions"><a class="btn btn-primary" href="https://nlplab-vista-research-vista-demo.hf.space/platform" target="_blank" rel="noopener">Open the VISTA platform</a><a class="btn btn-ghost" href="https://arxiv.org/abs/2605.10579" target="_blank" rel="noopener">VISTA paper</a></div>
+        </div>
+      </div>
+    </div>
+    <p class="spot-src">Videos, dialogue, reviewed decisions, intervention times, and assistant messages are taken verbatim from the EgoArgus decision annotations (<code>dataset/paper_eval.csv</code>). The videos were generated with VISTA.</p>
+  </div>
+</section>
 
+<!-- ===== PUBLICATIONS ===== -->
+<section class="section" id="publications">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div><div class="eyebrow">Publications</div><h2 class="h2">By year, since 2017.</h2></div>
+    </div>
+    <div class="pub-tools">
+      <input type="search" id="pubSearch" placeholder="Search title, author, venue…" aria-label="Search publications">
+      <div class="filters" id="pubFilters">
+        <button class="fbtn" aria-pressed="true" data-f="all">All</button>
+        <button class="fbtn" aria-pressed="false" data-f="selected">Selected</button>
+        <button class="fbtn" aria-pressed="false" data-f="situated">Situated intelligence</button>
+        <button class="fbtn" aria-pressed="false" data-f="personal">Personalization</button>
+        <button class="fbtn" aria-pressed="false" data-f="trust">Trustworthy reasoning</button>
+        <button class="fbtn" aria-pressed="false" data-f="efficient">Efficient AI</button>
+        <button class="fbtn" aria-pressed="false" data-f="journal">Journals</button>
+      </div>
+      <span class="pub-count" id="pubCount"></span>
+    </div>
+    <div id="pubList"></div>
+  </div>
+</section>
 
+<!-- ===== DEMOS ===== -->
+<section class="section tint" id="demos">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div><div class="eyebrow">Systems &amp; demos</div><h2 class="h2">Research you can watch running.</h2></div>
+      <p class="lead">Demo systems built by lab members, with short videos.</p>
+    </div>
+    <div class="demos" id="demoGrid">
+      <a class="demo reveal" href="https://youtu.be/u9apI9MoHF8" target="_blank" rel="noopener"><div class="thumb"><img src="assets/img/ISSR.png" alt="ISSR system" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="body"><div class="v">ACML 2025</div><h3>ISSR</h3><p>LLMs for vocabulary test distractor generation with iterative selection and self-review.</p></div></a>
+      <a class="demo reveal" href="https://youtu.be/SuiroLobtEU" target="_blank" rel="noopener" data-delay="1"><div class="thumb"><img src="assets/img/E-QGen.png" alt="E-QGen system" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="body"><div class="v">IJCAI 2024 Demo</div><h3>E-QGen</h3><p>Educational lecture abstract-based question generation.</p></div></a>
+      <a class="demo reveal" href="https://drive.google.com/file/d/15puaP0z9Ere8ctG8lzG4unj84rf2E_-a/view?usp=sharing" target="_blank" rel="noopener" data-delay="2"><div class="thumb"><img src="assets/img/ConvLogRecaller.png" alt="ConvLogRecaller system" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="body"><div class="v">SIGIR 2024 Demo</div><h3>ConvLogRecaller</h3><p>Real-time conversational information recall, with NTU NLP Lab.</p></div></a>
+      <a class="demo reveal" href="https://youtu.be/Hit4pBRYOGs" target="_blank" rel="noopener"><div class="thumb"><img src="assets/img/MAGIC.png" alt="MAGIC system" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="body"><div class="v">LREC-COLING 2024</div><h3>MAGIC</h3><p>Multi-argument generation with self-refinement for domain generalization in fact-checking.</p></div></a>
+      <a class="demo reveal" href="https://youtu.be/hLgLXMZczYo" target="_blank" rel="noopener" data-delay="1"><div class="thumb"><img src="assets/img/RefuteClaim.png" alt="RefuteClaim system" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="body"><div class="v">WWW 2024</div><h3>RefuteClaim</h3><p>Automatic fact-checking through flaw identification and explanation.</p></div></a>
+      <a class="demo reveal" href="https://youtu.be/QaeCrZThyeU" target="_blank" rel="noopener" data-delay="2"><div class="thumb"><img src="assets/img/EMNLP2023_MathEDU.png" alt="MathEDU" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="body"><div class="v">EMNLP 2023</div><h3>MathEDU</h3><p>LLMs and the future of mathematics education.</p></div></a>
+      <a class="demo reveal" href="https://youtu.be/KdIrrJAmspQ" target="_blank" rel="noopener"><div class="thumb"><img src="assets/img/FinComplaints.png" alt="Financial consumer complaints system" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="body"><div class="v">2024 法律 × 法遵科技黑客松 · 理律學堂跨領域特別獎</div><h3>金融消費者權益領航員</h3><p>NLPFIN × NYCU-NLP: refining financial consumer complaints.</p></div></a>
+    </div>
+  </div>
+</section>
 
-				<!-- Three -->
-					<section id="experience">
-						<a name="experience"></a><h2>Working Experience</h2>
-						<div class="row">
-							<ul>
-								<li>Postdoc Researcher, NLP Lab, National Taiwan University</li>
-								<li>Adjunct Assistant Professor, Dept. of Quantitative Finance, National Tsing Hua University</li>
-							</ul>
-						</div>
-					</section>
+<!-- ===== PEOPLE ===== -->
+<section class="section" id="people">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div><div class="eyebrow">People</div><h2 class="h2">The lab.</h2></div>
+    </div>
+    <div class="pi reveal">
+      <div class="photo"><img src="assets/img/head_shot.jpg" alt="An-Zi Yen"></div>
+      <div>
+        <h3>An-Zi Yen 顏安孜</h3>
+        <div class="role">Assistant Professor, Department of Computer Science, National Yang Ming Chiao Tung University</div>
+        <p>Dr. Yen's research interests include natural language processing and information retrieval. Her work has been published in AAAI, EMNLP, WWW, SIGIR, and CIKM. She received the Honorable Mention of the ACLCLP Doctoral Dissertation Award in 2020 and was a distinguished PC member at IJCAI 2023. She served as web chair of SIGIR 2023 and as a PC member of AAAI, IJCAI, CIKM, and EACL.</p>
+        <div class="links">
+          <a class="btn btn-light" href="https://scholar.google.com.tw/citations?user=QL-GNDQAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+          <a class="btn btn-light" href="https://github.com/NYCU-NLP-Lab" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn-light" href="https://www.youtube.com/@NYCU_NLP_Lab" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="facts">
+      <div class="fact reveal"><h4>Honors</h4><ul><li>Distinguished PC member, IJCAI 2023</li><li>MOST Postdoctoral Researcher Academic Research Award, 2021</li><li>Honorable Mention, ACLCLP Doctoral Dissertation Award, 2020</li><li>Honorary Membership, Phi Tau Phi Scholastic Honor Society, 2020</li></ul></div>
+      <div class="fact reveal" data-delay="1"><h4>Experience</h4><ul><li>Postdoctoral Researcher, NLP Lab, National Taiwan University</li><li>Adjunct Assistant Professor, Dept. of Quantitative Finance, National Tsing Hua University</li></ul></div>
+      <div class="fact reveal" data-delay="2"><h4>Service</h4><ul><li>Web chair, SIGIR 2023</li><li>PC member: AAAI, IJCAI, CIKM, EACL, EMNLP</li></ul></div>
+    </div>
+    <div class="members reveal">
+      <h4>PhD students</h4>
+      <div class="names"><span class="phd">Yu-Chien Tang</span><span class="phd">Yen-Shyun Huang</span></div>
+      <h4>Master's students</h4>
+      <div class="names"><span>You-Mei Huang</span><span>Hsiang-Yu Cheng</span><span>Ding-Xin Kang</span><span>Nien-Hui Huang</span><span>Yong-Xuan Zheng</span><span>Wei-Lin Wen</span><span>Ting-Shian Kuo</span><span>Lai-Sen Cao</span><span>Hong-Yuan Cheng</span><span>Yi-Fu Chen</span><span>Wei-Chia Chang</span><span>Min-Quan Wang</span><span>Tun-Chieh Yang</span><span>Chun-Ting Hou</span></div>
+      <h4>Alumni</h4>
+      <div class="names alumni"><span>Yu-Hang Deng</span><span>Bo-Cheng Pan</span><span>Min-Kuang Tsu</span><span>Yu-Tung Chou</span><span>Chun-Wei Kang</span><span>Guan-Yi He</span><span>Wei-Ling Hsu</span><span>Yu-Cheng Liu</span><span>Bo-Wei Chen</span><span>Cheng-Xin Song</span><span>Hsiu-Hung Lee</span><span>Yen-Chun Huang</span><span>Yu-Chen Kang</span><span>Jou-Chia Chiang</span></div>
+    </div>
+  </div>
+</section>
 
+<!-- ===== CONTACT ===== -->
+<section class="section dark contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <div class="eyebrow">Contact</div>
+      <div class="big">Interested in joining the lab or collaborating?<br><a href="mailto:azyen@nycu.edu.tw">azyen@nycu.edu.tw</a></div>
+      <p class="lead" style="margin-top:18px">Prospective students: read a recent paper from the area you like, then write to us with what you would do next.</p>
+    </div>
+    <ul class="reveal" data-delay="1">
+      <li><a href="mailto:azyen@nycu.edu.tw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>azyen@nycu.edu.tw</a></li>
+      <li><a href="https://scholar.google.com.tw/citations?user=QL-GNDQAAAAJ" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3L2 9l10 6 10-6-10-6z"/><path d="M6 11.5V17c0 1.5 3 3 6 3s6-1.5 6-3v-5.5"/></svg>Google Scholar</a></li>
+      <li><a href="https://github.com/NYCU-NLP-Lab" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-4.5 1.5-4.5-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>GitHub · NYCU-NLP-Lab</a></li>
+      <li><a href="https://www.youtube.com/@NYCU_NLP_Lab" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="6" width="19" height="12" rx="3"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor"/></svg>YouTube · NYCU_NLP_Lab</a></li>
+    </ul>
+  </div>
+</section>
 
+<footer><div class="wrap"><span>© NYCU NLP Lab · An-Zi Yen</span><span>Department of Computer Science, National Yang Ming Chiao Tung University, Hsinchu, Taiwan</span></div></footer>
 
-
-
-			</div>
-
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<ul class="copyright">
-						<li>&copy; All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script>
-				$(document).ready(function() {
-					$("li").each(function() {
-						var p = $(this).prop("parentElement");
-						if ($(p).attr("class") != "publications")
-							return;
-						var text = $(this).html();
-						text = text.replace("An-Zi Yen", "<u>An-Zi Yen</u>");
-				//		text = text.replace(/\((.+?)\)/, '(<strong><i>$1</i></strong>)');
-						text = text.replace(/In (Proceeding[^(,]+)/, 'In <i>$1</i>');
-						text = text.replace(/To appear in (Proceeding[^(,]+)/, 'To appear in <i>$1</i>');
-						$(this).html(text);
-					});
-				});
-				</script>
-	</body>
+<script src="data/publications.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="data/egoargus_cases.js"></script>
+<script src="assets/js/spotlight.js" defer></script>
+<script src="assets/js/explainers/egoargus.js" defer></script>
+<script src="assets/js/explainers/vdar.js" defer></script>
+<script src="assets/js/explainers/refute.js" defer></script>
+<script src="assets/js/explainers/personaedit.js" defer></script>
+<script src="assets/js/explainers/mathedu.js" defer></script>
+</body>
 </html>
