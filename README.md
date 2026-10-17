@@ -7,3 +7,5 @@ Static page for https://azyen0522.github.io/ (no build step). The lab website li
 - `assets/js/main.js` — shared with the lab site; `personal.js` — loads publication data from the lab site, builds the formal list, handles `#lab`
 
 `#lab` redirects to the lab website (used by the printed QR code). Publications are read from the lab site's `data/publications.js`, so updating that file updates both sites.
+
+Old URLs (`projects.html`, `member.html`, `assistants.html`) are kept as redirect pages to the lab website, since they are still indexed by search engines.
